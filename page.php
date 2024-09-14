@@ -43,17 +43,7 @@ the_post();
                     ">
                 <?php the_title()?>
               </span>
-              <h2 class="
-                      font-bold
-                      text-3xl
-                      sm:text-4xl
-                      2xl:text-[40px]
-                      sm:leading-snug
-                      text-dark
-                      mb-6
-                    ">
-                    About Us
-              </h2>
+             
           <div class="width-full
                   lg:flex
                   items-center

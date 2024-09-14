@@ -73,69 +73,6 @@ get_header()
 
       </div>
     </section>
-    <section class="pt-20 lg:pt-[120px] pb-10 lg:pb-20">
-    <div class="container">
-        <div class="flex flex-wrap -mx-4">
-
-            <?php 
-            // Query for 'news' post type
-            $wpnew = array(
-                'post_type' => 'news',
-                'post_status' => 'publish'
-            );
-
-            $newsquery = new WP_Query($wpnew);
-
-            if ($newsquery->have_posts()) {
-                while ($newsquery->have_posts()) {
-                    $newsquery->the_post(); 
-                    $imagepath = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full'); // Get featured image URL
-                    ?>
-                    
-                    <div class="w-full md:w-1/2 lg:w-1/3 px-4">
-                        <div class="mb-10 group wow fadeInUp" data-wow-delay=".2s">
-                            <div class="rounded overflow-hidden mb-8">
-                                <a href="<?php the_permalink(); ?>" class="block">
-                                    <img
-                                        src="<?php echo $imagepath[0]; ?>" 
-                                        alt="<?php the_title_attribute(); ?>"
-                                        class="w-full transition group-hover:scale-125 group-hover:rotate-6"
-                                    />
-                                </a>
-                            </div>
-                            <div>
-                                <span
-                                    class="bg-primary rounded inline-block text-center py-1 px-4 text-xs leading-loose font-semibold text-white mb-5"
-                                >
-                                    <?php echo get_the_date('M d, Y'); ?> <!-- Dynamic date -->
-                                </span>
-                                <h3>
-                                    <a
-                                        href="<?php the_permalink(); ?>"
-                                        class="font-semibold text-xl sm:text-2xl lg:text-xl xl:text-2xl mb-4 inline-block text-dark hover:text-primary"
-                                    >
-                                        <?php the_title(); ?> <!-- Post title -->
-                                    </a>
-                                </h3>
-                                <p class="text-base text-body-color">
-                                    <?php the_excerpt(); ?> <!-- Post excerpt -->
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <?php
-                }
-                wp_reset_postdata(); // Reset global post data after the query
-            } else {
-                echo '<p>No news found.</p>';
-            }
-            ?>
-
-        </div>
-    </div>
-</section>
-
 
     <?php wp_pagenavi(); ?>
 <!-- ====== Footer Section Start -->

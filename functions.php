@@ -12,7 +12,54 @@ function mytheme_setup() {
     // Add support for post thumbnails (featured images)
     add_theme_support('post-thumbnails');
     add_theme_support('custom-header');
+    add_theme_support('custom-background');
+    add_post_type_support('page','excerpt');
 }
+
+function register_news_post_type() {
+    $labels = array(
+        'name'               => 'News',
+        'singular_name'      => 'News',
+        'menu_name'          => 'News',
+        'name_admin_bar'     => 'News',
+        'add_new'            => 'Add New',
+        'add_new_item'       => 'Add New News',
+        'new_item'           => 'New News',
+        'edit_item'          => 'Edit News',
+        'view_item'          => 'View News',
+        'all_items'          => 'All News',
+        'search_items'       => 'Search News',
+        'not_found'          => 'No news found.',
+        'not_found_in_trash' => 'No news found in Trash.'
+    );
+    
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array('slug' => 'news'),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array('title', 'editor', 'thumbnail', 'excerpt', 'comments')
+    );
+    
+    register_post_type('news', $args);
+}
+
+add_action('init', 'register_news_post_type');
+
+register_sidebar(
+    array(
+        'name'          => 'Sidebar Location',
+        'id'            => 'sidebar'
+
+    )
+    );
 function my_theme_enqueue_scripts() {
     $theme_uri = get_template_directory_uri(); // Get theme directory URI
 

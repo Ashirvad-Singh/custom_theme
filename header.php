@@ -4,20 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CreatAIGenie</title>
-
+    <title><?php wp_title()?> <?php bloginfo('name')?></title
     <!-- CSS Files -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/animate.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/tailwind.css">
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/wow.min.js"></script>
-    <!-- Important: Include wp_head() -->
+    
   
  
-    <?php wp_head(); ?> <!-- Allows WordPress and plugins to insert scripts and styles -->
+    <?php wp_head(); ?> 
 </head>
-<body>
+<body class='<?php body_class() ?>'>
     <!-- Get header image dynamically -->
     <?php $logoimg = get_header_image(); ?>
 
@@ -28,7 +27,7 @@
             <div class="flex items-center justify-between relative">
                 <div class="w-60 flex items-center">
                     <a href="" class="flex navbar-logo py-5 text-[#ae27eb] text-2xl font-bold">
-                        <img src="<?php echo $logoimg; ?>" alt="Logo" width="30px">CreatAIGenie
+                        <img src="<?php echo $logoimg; ?>" alt="Logo" width="30px">
                     </a>
                 </div>
                 <div class="flex items-center">

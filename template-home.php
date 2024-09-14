@@ -257,7 +257,7 @@ get_header();
 <!-- ====== Hero Section End -->
 
 <!-- ====== Features Section Start -->
-<section class="pt-20 lg:pt-[120px] pb-8 lg:pb-[70px]">
+<section id="features" class="pt-20 lg:pt-[120px] pb-8 lg:pb-[70px]">
   <div class="container">
     <div class="flex flex-wrap -mx-4">
       <div class="w-full px-4">

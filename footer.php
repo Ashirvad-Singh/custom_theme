@@ -1,25 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>
-CreatAIGenie
-  </title>
-  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
-  <link rel="stylesheet" href="assets/css/animate.css" />
-  <link rel="stylesheet" href="assets/css/tailwind.css" />
-
-  <!-- ==== WOW JS ==== -->
-  <script src="assets/js/wow.min.js"></script>
-  <script>
-    new WOW().init();
-  </script>
-</head>
-
-<body>
 <footer class="bg-black pt-20 lg:pt-[120px] relative z-10 wow fadeInUp" data-wow-delay=".15s">
     <div class="container">
       <div class="flex flex-wrap -mx-4">
@@ -84,52 +63,7 @@ CreatAIGenie
         <div class="w-full sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12 px-4">
           <div class="w-full mb-10">
             <h4 class="text-white text-lg font-semibold mb-9">Features</h4>
-            <ul>
-              <li>
-                <a href="#pricing" class="
-                      inline-block
-                      text-base text-[#f3f4fe]
-                      hover:text-primary
-                      leading-loose
-                      mb-2
-                    ">
-                  How it works
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)" class="
-                      inline-block
-                      text-base text-[#f3f4fe]
-                      hover:text-primary
-                      leading-loose
-                      mb-2
-                    ">
-                  Privacy policy
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)" class="
-                      inline-block
-                      text-base text-[#f3f4fe]
-                      hover:text-primary
-                      leading-loose
-                      mb-2
-                    ">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)" class="
-                      inline-block
-                      text-base text-[#f3f4fe]
-                      hover:text-primary
-                      leading-loose
-                      mb-2
-                    ">
-                  Refund policy
-                </a>
-              </li>
-            </ul>
+            <?php dynamic_sidebar('sidebar');?>
           </div>
         </div>
         <div class="w-full sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12 px-4">
@@ -392,3 +326,4 @@ CreatAIGenie
 
 </body>
 </html>
+<?php wp_footer(); ?>

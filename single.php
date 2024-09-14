@@ -6,6 +6,7 @@ the_post();
       <div class="container">
         <div class="flex flex-wrap justify-center -mx-4">
           <div class="w-full px-4">
+            
             <div
               class="
                 relative
@@ -109,7 +110,7 @@ the_post();
                           />
                         </svg>
                       </span>
-                      <?php echo the_time('M d, Y'); ?>
+                      <?php echo the_date('M d, Y'); ?>
                     </p>
                     
                    
@@ -151,7 +152,10 @@ the_post();
                   >
                     <?php the_content();?>
                   </p>
+
+
                  
+                 <?php comments_template(); ?>
                  
                   
                  
