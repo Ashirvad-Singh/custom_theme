@@ -3,3 +3,13 @@ Theme Name:Create Ai Genie
 Description:BLog,Marketing
 Author:Ashirvad SIngh
 */
+
+input{
+    background-color: #f1f1f1;
+    border: 2px solid ;
+    color: #000000;
+    padding: 10px 15px;
+    margin: 5px 0;
+    width:  60px !important;
+    box-sizing: border-box;
+}

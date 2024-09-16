@@ -23,17 +23,7 @@ get_header();
                 ">
             Main Features
           </h2>
-          <p class="
-                  text-lg
-                  sm:text-xl
-                  leading-relaxed
-                  sm:leading-relaxed
-                  text-body-color
-                ">
-            The urgent problem CreatAiGenie solves is the increasing demand for unique and updated content across
-            industries. Businesses struggle with content generation, leading to high labor costs and time
-            inefficiencies.
-          </p>
+          
         </div>
       </div>
     </div>
@@ -76,10 +66,9 @@ get_header();
             </svg>
           </div>
           <h4 class="font-bold text-xl text-dark mb-3">
-            Resource Constraints
+           <?php the_field('features1_heading')?>
           </h4>
-          <p class="text-body-color mb-8 lg:mb-11"> Small businesses or individuals may lack the budget to hire
-            professional copywriters, limiting their ability to create high-quality content.
+          <p class="text-body-color mb-8 lg:mb-11">  <?php the_field('features1')?>
           </p>
 
         </div>
@@ -122,11 +111,10 @@ get_header();
             </svg>
           </div>
           <h4 class="font-bold text-xl text-dark mb-3">
-            Time-Consuming Content Creation
+          <?php the_field('features2_heading')?>
           </h4>
           <p class="text-body-color mb-8 lg:mb-11">
-            Copywriters often spend significant time brainstorming ideas, crafting engaging content, and ensuring it
-            aligns with brand messaging.
+          <?php the_field('feature2')?>
           </p>
 
         </div>
@@ -178,11 +166,10 @@ get_header();
             </svg>
           </div>
           <h4 class="font-bold text-xl text-dark mb-3">
-            Content Personalization
+          <?php the_field('features3_heading')?>
           </h4>
           <p class="text-body-color mb-8 lg:mb-11">
-            Tailoring content to specific audiences and platforms requires extensive research and analysis, resulting in
-            inefficiencies and inconsistencies.
+          <?php the_field('feature3')?>
           </p>
 
         </div>
@@ -225,11 +212,10 @@ get_header();
             </svg>
           </div>
           <h4 class="font-bold text-xl text-dark mb-3">
-            AI-Powered Content Generation
+          <?php the_field('feature4_heading')?>
           </h4>
           <p class="text-body-color mb-8 lg:mb-11">
-            Leveraging advanced natural language processing (NLP) algorithms to automate the process of generating
-            compelling copy for various purposes.
+          <?php the_field('features4')?>
           </p>
 
         </div>
